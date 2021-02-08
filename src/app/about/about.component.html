@@ -1,0 +1,51 @@
+<div class="container">
+<h1 appHighlight>This is A website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories</h1>
+
+  <div *ngIf = "profile">
+  <div class="panel">
+    <div class="panel-heading ">
+      Username: {{profile.login}},
+
+      <a href="{{profile.html_url}}" class="btn btn-danger btn-sm"target="_blank">View  Profile on Github</a>
+      {{profile.followers}}Followers,
+      {{profile.following}}Following,
+      {{profile.public_repos}}Repositories,
+  </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile avatar">
+          <p *ngIf ='profile.bio'>Bio:{{profile.bio}}</p>
+        </div>
+       <div class="col-md-3">
+       <div class="panel panel-default">
+         <div class="panel-heading1">
+           <h2 class="panel-title">Repositories</h2>
+           </div>
+           <div *ngFor = 'let repo of repos'>
+             <ul>
+               <li>Repository:{{repo.name}}</li>
+               <p>created on:{{repo.created_at|date}}</p>
+               <p>Updated :{{repo.updated_at|date|dateCount}}</p>
+
+               <a href="{{repo.html_url}}" class="btn btn-danger btn"target="_blank">SEARCH REPOSITORY</a>
+               <p *ngIf ='repo.description'>Description:{{repo.description}}</p>
+             </ul>
+
+
+
+
+           </div>
+         </div>
+
+       </div>
+
+
+           </div>
+
+         </div>
+
+       </div>
+      </div>
+
+</div>

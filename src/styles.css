@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+
+.panel-heading{
+background-color:   pink;
+color: black;
+}
+body{
+  border-style: inset;
+  border-color: pink;
+  background-color: purple;
+  font-family: 'El Messiri', sans-serif;
+  border-width: 3px;
+  border-left-width: 10px;
+  border-right-width: 10px;
+  color: white;
+}
+img {
+  border-radius: 8px;
+  height: auto;
+  width: 350px;
+  padding-top: 20px;
+}
+.search-form{
+  padding-top: 20px;
+}
+h1{
+  font-size: 25px;
+}
+.navbar-nav{
+  font-size: 30px;
+}
